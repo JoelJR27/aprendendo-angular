@@ -1,0 +1,177 @@
+<section class="py-12 px-24 flex flex-col mx-auto max-w-4xl">
+  <h2 class="text-2xl font-bold">O que é Angular e sua filosofia</h2>
+  <p class="text-lg text-gray-700 py-4">
+    Se você vem do React, a primeira mudança importante é entender que o Angular não é apenas uma
+    biblioteca para construir interfaces. Ele é um framework completo, com decisões arquiteturais já
+    definidas.
+  </p>
+  <h3 class="text-xl font-semibold mt-6">📌 Definição</h3>
+  <p class="text-lg text-gray-700 py-4">
+    Angular é um framework frontend mantido pela Google para criação de aplicações web escaláveis,
+    utilizando TypeScript como linguagem principal.
+  </p>
+  <p class="text-lg text-gray-700 py-4">Ele já oferece, de forma nativa:</p>
+  <ul class="list-disc list-inside text-lg text-gray-700 py-4">
+    <li class="py-1">Sistema de componentes</li>
+    <li class="py-1">Roteamento</li>
+    <li class="py-1">Injeção de dependência</li>
+    <li class="py-1">Consumo de APIs HTTP</li>
+    <li class="py-1">Formulários</li>
+    <li class="py-1">Testes</li>
+    <li class="py-1">Gerenciamento reativo com Signals</li>
+  </ul>
+  <h3 class="text-xl font-semibold mt-6">🧠 Filosofia do Angular</h3>
+  <p class="text-lg text-gray-700 py-4">
+    O Angular segue uma filosofia <strong>opinionada</strong>.
+  </p>
+  <p class="text-lg text-gray-700 py-4">Isso significa que o framework já define:</p>
+  <ul class="list-disc list-inside text-lg text-gray-700 py-4">
+    <li class="py-1">Como organizar pastas</li>
+    <li class="py-1">Como criar componentes</li>
+    <li class="py-1">Como compartilhar lógica</li>
+    <li class="py-1">Como consumir APIs</li>
+    <li class="py-1">Como navegar entre páginas</li>
+  </ul>
+  <strong> React vs Angular </strong>
+  <p class="text-lg text-gray-700 py-4">No React, você escolhe as ferramentas:</p>
+  <ul class="list-disc list-inside text-lg text-gray-700 py-4">
+    <li class="py-1">React Router</li>
+    <li class="py-1">Axios</li>
+    <li class="py-1">Zustand / Redux</li>
+    <li class="py-1">React Hook Form</li>
+  </ul>
+  <p class="text-lg text-gray-700 py-4">No Angular, tudo isso já vem integrado ao framework.</p>
+  <h3 class="text-xl font-semibold mt-6">🏗️ Analogia Prática</h3>
+  <strong class="pt-4">React</strong>
+  <p class="text-lg text-gray-700 py-4">É como receber peças soltas e montar sua própria casa.</p>
+  <strong>Angular</strong>
+  <p class="text-lg text-gray-700 py-4">
+    É como receber uma casa com fundação, encanamento e elétrica já prontos.
+  </p>
+  <h2 class="text-2xl font-bold mt-8">⚛️ Diferenças Fundamentais para Quem Vem do React</h2>
+
+  <table class="table-caption w-fit mx-auto border-collapse border border-gray-300 mt-8 text-left">
+    <tr class="bg-gray-100">
+      <th class="text-left px-4 py-2">React</th>
+      <th class="text-left px-4 py-2">Angular</th>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">Biblioteca</td>
+      <td class="border px-4 py-2">Framework completo</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">JSX</td>
+      <td class="border px-4 py-2">Templates HTML</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">Hooks</td>
+      <td class="border px-4 py-2">Signals + Lifecycle Hooks</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">Context API</td>
+      <td class="border px-4 py-2">Services + DI</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">Props</td>
+      <td class="border px-4 py-2">input()</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">Callback props</td>
+      <td class="border px-4 py-2">output()</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">Fetch/Axios</td>
+      <td class="border px-4 py-2">HttpClient</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">React Router</td>
+      <td class="border px-4 py-2">Angular Router</td>
+    </tr>
+  </table>
+  <h2 class="text-2xl font-bold mt-8">Conceitos Centrais do Angular</h2>
+  <ol class="list-decimal list-inside text-lg text-gray-700 py-4 *:*:inline">
+    <li class="py-1 gap-4">
+      <h4 class="font-semibold">Componentes</h4>
+      -
+      <p class="text-lg text-gray-500">Cada tela ou parte da interface é um componente.</p>
+    </li>
+    <li class="py-1 gap-4">
+      <h4 class="font-semibold">Templates</h4>
+      -
+      <p class="text-lg text-gray-500">O HTML possui sintaxe própria do Angular.</p>
+    </li>
+    <li class="py-1 gap-4">
+      <h4 class="font-semibold">Services</h4>
+      -
+      <p class="text-lg text-gray-500">
+        Classes responsáveis por lógica de negócio e acesso a dados.
+      </p>
+    </li>
+    <li class="py-1 gap-4">
+      <h4 class="font-semibold">Dependency Injection</h4>
+      -
+      <p class="text-lg text-gray-500">O Angular cria e injeta dependências automaticamente.</p>
+    </li>
+    <li class="py-1 gap-4">
+      <h4 class="font-semibold">Signals</h4>
+      -
+      <p class="text-lg text-gray-500">Estado reativo moderno do Angular.</p>
+    </li>
+    <li class="py-1 gap-4">
+      <h4 class="font-semibold">RxJS</h4>
+      -
+      <p class="text-lg text-gray-500">Sistema poderoso de programação reativa.</p>
+    </li>
+    <li class="py-1 gap-4">
+      <h4 class="font-semibold">Router</h4>
+      -
+      <p class="text-lg text-gray-500">Sistema de rotas nativo.</p>
+    </li>
+  </ol>
+  <h2 class="text-2xl font-bold mt-8">📂 Exemplo Mental de Estrutura</h2>
+  <ul class="text-lg text-gray-700 p-4 bg-gray-100 rounded-lg w-fit my-8">
+    <li>Component → Interface</li>
+    <li>Service → Regras de negócio</li>
+    <li>HttpClient → API</li>
+    <li>Signal → Estado local</li>
+    <li>Router → Navegação</li>
+  </ul>
+  <h3 class="text-xl font-semibold mt-6">🔥 Exemplo Comparativo</h3>
+  <strong class="text-lg font-bold my-4">React</strong>
+
+  <pre class="bg-gray-100 p-4 rounded-lg text-sm overflow-x-auto">
+  <code class="text-sm text-gray-700">
+      function Counter() &#123;
+        const [count, setCount] = useState(0)
+
+        return (
+          &lt;button onClick=&#123;() =&gt; setCount(count + 1)&#125;&gt;
+            &#123;count&#125;
+          &lt;/button&gt;
+        )
+      &#125;
+    </code>
+</pre>
+
+  <strong class="text-lg font-bold my-4">Angular</strong>
+  <pre class="bg-gray-100 p-4 rounded-lg text-sm overflow-x-auto">
+    <code class="text-sm text-gray-700">
+  &commat;Component(&#123;
+    selector: 'app-counter',
+    template: `
+      &lt;button (click)="increment()"&gt;
+        &#123;&#123; "count()" &#125;&#125;
+      &lt;/button&gt;
+    `
+  &#125;)
+  
+  export class CounterComponent &#123;
+    count = signal(0)
+
+    increment() &#123;
+      this.count.update(value => value + 1)
+    &#125;
+  &#125;
+    </code>
+  </pre>
+</section>

@@ -1,512 +1,507 @@
-<main class="flex-1 space-y-8 px-4 py-8 max-w-5xl mx-auto">
-  <app-back-to-top-button></app-back-to-top-button>
-  <header class="mb-8 p-4">
-    <h1 class="text-3xl font-bold mb-4">Roadmap Angular para Desenvolvedores React</h1>
-    <p class="text-lg text-gray-700 py-2">
-      Como você já possui 2 anos de experiência com React, seu foco não precisa ser em fundamentos
-      gerais de frontend, mas sim em entender a mentalidade do Angular, sua arquitetura opinionada e
-      as ferramentas nativas que ele oferece.
-    </p>
+<app-back-to-top-button></app-back-to-top-button>
+<header class="mb-8 p-4">
+  <h1 class="text-3xl font-bold mb-4">Roadmap Angular para Desenvolvedores React</h1>
+  <p class="text-lg text-gray-700 py-2">
+    Como você já possui 2 anos de experiência com React, seu foco não precisa ser em fundamentos
+    gerais de frontend, mas sim em entender a mentalidade do Angular, sua arquitetura opinionada e
+    as ferramentas nativas que ele oferece.
+  </p>
 
-    <section aria-labelledby="objetivo-roadmap">
-      <h2 id="objetivo-roadmap" class="text-2xl font-bold mb-4">Objetivo do Roadmap</h2>
-      <p class="text-lg text-gray-700">Ao final deste roadmap, você será capaz de:</p>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1">Entender projetos Angular existentes.</li>
-        <li class="py-1">Criar novas funcionalidades com autonomia.</li>
-        <li class="py-1">Aplicar boas práticas.</li>
-        <li class="py-1">Escrever código escalável.</li>
-        <li class="py-1">Se destacar no estágio.</li>
-      </ul>
-    </section>
-  </header>
-
-  <section aria-labelledby="indice" class="mb-8 px-4">
-    <h3 id="indice" class="text-xl font-bold mb-4">Índice</h3>
-    <ol class="list-decimal list-inside text-gray-700">
-      <li class="py-1">
-        <a href="#visao-geral" class="text-blue-500 hover:underline">Visão Geral da Jornada</a>
-      </li>
-      <li class="py-1">
-        <a href="#fase-1" class="text-blue-500 hover:underline">Fase 1 — Fundamentos do Angular</a>
-      </li>
-      <li class="py-1">
-        <a href="#fase-2" class="text-blue-500 hover:underline">Fase 2 — Componentes e Templates</a>
-      </li>
-      <li class="py-1">
-        <a href="#fase-3" class="text-blue-500 hover:underline"
-          >Fase 3 — Comunicação entre Componentes</a
-        >
-      </li>
-      <li class="py-1">
-        <a href="#fase-4" class="text-blue-500 hover:underline"
-          >Fase 4 — Arquitetura e Organização</a
-        >
-      </li>
-      <li class="py-1">
-        <a href="#fase-5" class="text-blue-500 hover:underline">Fase 5 — APIs e RxJS</a>
-      </li>
-      <li class="py-1">
-        <a href="#fase-6" class="text-blue-500 hover:underline">Fase 6 — Tópicos Avançados</a>
-      </li>
-      <li class="py-1">
-        <a href="#ordem-prioridade" class="text-blue-500 hover:underline"
-          >Ordem de Prioridade para o Estágio</a
-        >
-      </li>
-      <li class="py-1">
-        <a href="#mapeamento" class="text-blue-500 hover:underline">Mapeamento React → Angular</a>
-      </li>
-      <li class="py-1">
-        <a href="#projeto-pratico" class="text-blue-500 hover:underline"
-          >Projeto Prático Recomendado</a
-        >
-      </li>
-      <li class="py-1">
-        <a href="#competencias" class="text-blue-500 hover:underline"
-          >Competências que Farão Você se Destacar</a
-        >
-      </li>
-      <li class="py-1">
-        <a href="#estrategia-estudo" class="text-blue-500 hover:underline"
-          >Estratégia de Estudo Recomendada</a
-        >
-      </li>
-      <li class="py-1">
-        <a href="#resultado-esperado" class="text-blue-500 hover:underline">Resultado Esperado</a>
-      </li>
-    </ol>
-  </section>
-
-  <section aria-labelledby="visao-geral" class="mb-8">
-    <h2 id="visao-geral" class="text-2xl font-bold mb-4">📌 Visão Geral da Jornada</h2>
-    <p class="text-lg text-gray-700">O roadmap está dividido em 6 fases:</p>
-    <ol class="list-decimal list-inside text-gray-700">
-      <li class="py-1">Fundamentos do Angular</li>
-      <li class="py-1">Componentes e Templates</li>
-      <li class="py-1">Comunicação e Gerenciamento de Estado</li>
-      <li class="py-1">Arquitetura e Organização</li>
-      <li class="py-1">Consumo de APIs e RxJS</li>
-      <li class="py-1">Tópicos Avançados e Boas Práticas</li>
-    </ol>
-  </section>
-
-  <section aria-labelledby="fase-1" class="mb-8">
-    <h2 id="fase-1" class="text-2xl font-bold">🧭 FASE 1 — Fundamentos do Angular</h2>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">1. O que é Angular e sua filosofia</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1">Framework completo e opinionado.</li>
-        <li class="py-1">Diferenças entre Angular e React.</li>
-        <li class="py-1">TypeScript como base obrigatória.</li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">2. Estrutura de um projeto Angular</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">main.ts</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">app.config.ts</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">app.routes.ts</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">app.component.ts</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">angular.json</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">tsconfig.json</code></li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">3. Angular CLI</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1"><code>ng new</code></li>
-        <li class="py-1"><code>ng generate</code></li>
-        <li class="py-1"><code>ng serve</code></li>
-        <li class="py-1"><code>ng build</code></li>
-        <li class="py-1"><code>ng test</code></li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">4. Arquitetura baseada em componentes</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1">Componentes standalone.</li>
-        <li class="py-1">Decorator <code class="bg-gray-200 p-1 rounded"> @Component</code>.</li>
-      </ul>
-    </article>
-  </section>
-
-  <section aria-labelledby="fase-2" class="mb-8">
-    <h2 id="fase-2" class="text-2xl font-bold">🧩 FASE 2 — Componentes e Templates</h2>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">5. Templates HTML do Angular</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1">
-          Interpolação <code class="bg-gray-200 p-1 rounded">{{"{{ }}"}}</code>
-        </li>
-        <li class="py-1">Property Binding <code class="bg-gray-200 p-1 rounded">[prop]</code></li>
-        <li class="py-1">Event Binding <code class="bg-gray-200 p-1 rounded">(event)</code></li>
-        <li class="py-1">
-          Two-way Binding <code class="bg-gray-200 p-1 rounded">[(ngModel)]</code>
-        </li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">6. Diretivas</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">&commat;if</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">&commat;for</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">&commat;switch</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">ngClass</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">ngStyle</code></li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">7. Pipes</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">date</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">currency</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">uppercase</code></li>
-        <li class="py-1">Pipes customizados.</li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">8. Signals</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">signal()</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">computed()</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">effect()</code></li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">9. Ciclo de vida dos componentes</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">ngOnInit</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">ngOnChanges</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">ngOnDestroy</code></li>
-      </ul>
-    </article>
-  </section>
-
-  <section aria-labelledby="fase-3" class="mb-8">
-    <h2 id="fase-3" class="text-2xl font-bold">🔄 FASE 3 — Comunicação entre Componentes</h2>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">10. Input e Output</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">input()</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">output()</code></li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">11. ViewChild e Content Projection</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">viewChild()</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">&lt;ng-content&gt;</code></li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">12. Shared State com Services</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1">Singleton services.</li>
-        <li class="py-1">Injeção de dependência.</li>
-      </ul>
-    </article>
-  </section>
-
-  <section aria-labelledby="fase-4" class="mb-8">
-    <h2 id="fase-4" class="text-2xl font-bold">🏗️ FASE 4 — Arquitetura e Organização</h2>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">13. Services</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">@Injectable()</code></li>
-        <li>Separação de responsabilidades.</li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">14. Dependency Injection (DI)</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">inject()</code></li>
-        <li class="py-1">Providers.</li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">15. Rotas</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">RouterLink</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">RouterOutlet</code></li>
-        <li class="py-1">Lazy Loading.</li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">16. Guards</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">CanActivateFn</code></li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">17. Interceptors</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1">Manipulação global de requests.</li>
-      </ul>
-    </article>
-  </section>
-
-  <section aria-labelledby="fase-5" class="mb-8">
-    <h2 id="fase-5" class="text-2xl font-bold">🌐 FASE 5 — APIs e RxJS</h2>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">18. HttpClient</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1">GET, POST, PUT e DELETE.</li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">19. Observables</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">subscribe()</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">pipe()</code></li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">20. Operadores RxJS</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">map</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">switchMap</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">catchError</code></li>
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">debounceTime</code></li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">21. Async Pipe</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1"><code class="bg-gray-200 p-1 rounded">| async</code></li>
-      </ul>
-    </article>
-  </section>
-
-  <section aria-labelledby="fase-6" class="mb-8">
-    <h2 id="fase-6" class="text-2xl font-bold">🧱 FASE 6 — Tópicos Avançados</h2>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">22. Forms</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1">Template-driven Forms.</li>
-        <li class="py-1">Reactive Forms.</li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">23. Validação de formulários</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1">Validators nativos.</li>
-        <li class="py-1">Validators customizados.</li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">24. Change Detection</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1">Estratégia padrão.</li>
-        <li class="py-1"><code>OnPush</code>.</li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">25. Controle de Performance</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1"><code>track</code>.</li>
-        <li class="py-1">Lazy loading.</li>
-        <li class="py-1">Memoização com <code>computed()</code>.</li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">26. Testes</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1">Unit tests com <code>TestBed</code>.</li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">27. Organização por Features</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1">Core.</li>
-        <li class="py-1">Shared.</li>
-        <li class="py-1">Features.</li>
-      </ul>
-    </article>
-
-    <article class="my-4">
-      <h3 class="text-xl font-bold mb-2">28. Boas práticas</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li class="py-1">Smart vs Presentational Components.</li>
-        <li class="py-1">Tipagem forte.</li>
-        <li class="py-1">Separação de responsabilidades.</li>
-      </ul>
-    </article>
-  </section>
-
-  <section aria-labelledby="prioridade-estagio" class="mb-8">
-    <h2 id="prioridade-estagio" class="text-2xl font-bold">
-      🏆 Ordem de Prioridade para o Estágio
-    </h2>
-    <ol class="list-decimal list-inside text-gray-700">
-      <li class="py-1">Componentes standalone</li>
-      <li class="py-1">Templates e bindings</li>
-      <li class="py-1">Diretivas (<code>&commat;if</code>, <code>&commat;for</code>)</li>
-      <li class="py-1">Signals</li>
-      <li class="py-1">Services</li>
-      <li class="py-1">Dependency Injection</li>
-      <li class="py-1">HttpClient</li>
-      <li class="py-1">RxJS básico</li>
-      <li class="py-1">Rotas</li>
-      <li class="py-1">Reactive Forms</li>
-      <li class="py-1">Interceptors</li>
-      <li class="py-1">Guards</li>
-    </ol>
-  </section>
-
-  <section aria-labelledby="react-angular" class="mb-8 flex flex-col items-center">
-    <h2 id="react-angular" class="text-2xl font-bold">⚛️ Mapeamento React → Angular</h2>
-
-    <table class="w-full border-collapse border border-gray-300 max-w-[80%]">
-      <caption class="text-left text-lg mb-4 text-gray-500 font-bold my-4">
-        Equivalência entre conceitos do React e Angular
-      </caption>
-      <thead class="bg-gray-100">
-        <tr class="border-b border-gray-300">
-          <th class="border-r border-gray-300 p-2" scope="col">React</th>
-          <th class="p-2" scope="col">Angular</th>
-        </tr>
-      </thead>
-      <tbody class="text-gray-700 divide-y text-sm text-center">
-        <tr class="border-b border-gray-300">
-          <td class="border-r border-gray-300 p-2">JSX</td>
-          <td class="p-2">Template HTML</td>
-        </tr>
-        <tr class="border-b border-gray-300">
-          <td class="border-r border-gray-300 p-2">Props</td>
-          <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">input()</code></td>
-        </tr>
-        <tr class="border-b border-gray-300">
-          <td class="border-r border-gray-300 p-2">Callback Props</td>
-          <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">output()</code></td>
-        </tr>
-        <tr class="border-b border-gray-300">
-          <td class="border-r border-gray-300 p-2">useState</td>
-          <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">signal()</code></td>
-        </tr>
-        <tr class="border-b border-gray-300">
-          <td class="border-r border-gray-300 p-2">useMemo</td>
-          <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">computed()</code></td>
-        </tr>
-        <tr class="border-b border-gray-300">
-          <td class="border-r border-gray-300 p-2">useEffect</td>
-          <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">effect()</code></td>
-        </tr>
-        <tr class="border-b border-gray-300">
-          <td class="border-r border-gray-300 p-2">useEffect</td>
-          <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">effect()</code></td>
-        </tr>
-        <tr class="border-b border-gray-300">
-          <td class="border-r border-gray-300 p-2">Context API</td>
-          <td class="p-2">Services + DI</td>
-        </tr>
-        <tr class="border-b border-gray-300">
-          <td class="border-r border-gray-300 p-2">React Router</td>
-          <td class="p-2">Angular Router</td>
-        </tr>
-        <tr class="border-b border-gray-300">
-          <td class="border-r border-gray-300 p-2">Fetch/Axios</td>
-          <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">HttpClient</code></td>
-        </tr>
-        <tr class="border-b border-gray-300">
-          <td class="border-r border-gray-300 p-2">Custom Hooks</td>
-          <td class="p-2">Services</td>
-        </tr>
-        <tr class="border-b border-gray-300">
-          <td class="border-r border-gray-300 p-2">Conditional Rendering</td>
-          <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">&commat;if</code></td>
-        </tr>
-        <tr class="border-b border-gray-300">
-          <td class="border-r border-gray-300 p-2">Conditional Rendering</td>
-          <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">&commat;if</code></td>
-        </tr>
-        <tr class="border-b border-gray-300">
-          <td class="border-r border-gray-300 p-2">Array Rendering</td>
-          <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">&commat;for</code></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section aria-labelledby="projeto-pratico" class="mb-8">
-    <h2 id="projeto-pratico" class="text-xl font-bold mb-4">🚀 Projeto Prático Recomendado</h2>
-    <p class="text-gray-700 mb-4">Construa um CRUD simples de tarefas com:</p>
-    <div class="bg-gray-100 p-4 rounded flex flex-col md:flex-row gap-10 justify-center max-w-[50%] mx-auto">
-      <ul class="list-disc list-inside">
-        <li class="text-gray-700 py-1">Listagem de tarefas</li>
-        <li class="text-gray-700 py-1">Criação</li>
-        <li class="text-gray-700 py-1">Edição</li>
-        <li class="text-gray-700 py-1">Exclusão</li>
-        <li class="text-gray-700 py-1">Busca</li>
-        <li class="text-gray-700 py-1">Filtros</li>
-        <li class="text-gray-700 py-1">Persistência em API</li>
-      </ul>
-
-
-      <ul class="list-disc list-inside text-gray-700">
-        <p class="text-gray-700">Isso permitirá praticar:</p>
-        <li class="text-blue-500 py-1">Components</li>
-        <li class="text-blue-500 py-1">Signals</li>
-        <li class="text-blue-500 py-1">Services</li>
-        <li class="text-blue-500 py-1">HttpClient</li>
-        <li class="text-blue-500 py-1">RxJS</li>
-        <li class="text-blue-500 py-1">Forms</li>
-        <li class="text-blue-500 py-1">Routing</li>
-      </ul>
-    </div>
-  </section>
-
-  <section aria-labelledby="competencias" class="mb-8">
-    <h2 id="competencias" class="text-xl font-bold mb-4">🎯 Competências que Farão Você se Destacar</h2>
+  <section aria-labelledby="objetivo-roadmap">
+    <h2 id="objetivo-roadmap" class="text-2xl font-bold mb-4">Objetivo do Roadmap</h2>
+    <p class="text-lg text-gray-700">Ao final deste roadmap, você será capaz de:</p>
     <ul class="list-disc list-inside text-gray-700">
-      <li class="text-gray-700 py-1">Escrever código tipado.</li>
-      <li class="text-gray-700 py-1">Usar Signals corretamente.</li>
-      <li class="text-gray-700 py-1">Evitar lógica excessiva nos templates.</li>
-      <li class="text-gray-700 py-1">Separar responsabilidades entre componentes e services.</li>
-      <li class="text-gray-700 py-1">Entender RxJS.</li>
-      <li class="text-gray-700 py-1">Criar componentes reutilizáveis.</li>
-      <li class="text-gray-700 py-1">Organizar o projeto por features.</li>
+      <li class="py-1">Entender projetos Angular existentes.</li>
+      <li class="py-1">Criar novas funcionalidades com autonomia.</li>
+      <li class="py-1">Aplicar boas práticas.</li>
+      <li class="py-1">Escrever código escalável.</li>
+      <li class="py-1">Se destacar no estágio.</li>
     </ul>
   </section>
+</header>
 
-  <section aria-labelledby="estrategia-estudo" class="mb-8">
-    <h2 id="estrategia-estudo" class="text-xl font-bold mb-4">📚 Estratégia de Estudo Recomendada</h2>
-    <ol class="list-decimal list-inside text-gray-700">
-      <li class="text-gray-700 py-1">Entenda a teoria.</li>
-      <li class="text-gray-700 py-1">Compare com React.</li>
-      <li class="text-gray-700 py-1">Veja um exemplo simples.</li>
-      <li class="text-gray-700 py-1">Implemente.</li>
-      <li class="text-gray-700 py-1">Refatore.</li>
-    </ol>
-  </section>
-</main>
+<section aria-labelledby="indice" class="mb-8 px-4">
+  <h3 id="indice" class="text-xl font-bold mb-4">Índice</h3>
+  <ol class="list-decimal list-inside text-gray-700">
+    <li class="py-1">
+      <a href="#visao-geral" class="text-blue-500 hover:underline">Visão Geral da Jornada</a>
+    </li>
+    <li class="py-1">
+      <a href="#fase-1" class="text-blue-500 hover:underline">Fase 1 — Fundamentos do Angular</a>
+    </li>
+    <li class="py-1">
+      <a href="#fase-2" class="text-blue-500 hover:underline">Fase 2 — Componentes e Templates</a>
+    </li>
+    <li class="py-1">
+      <a href="#fase-3" class="text-blue-500 hover:underline"
+        >Fase 3 — Comunicação entre Componentes</a
+      >
+    </li>
+    <li class="py-1">
+      <a href="#fase-4" class="text-blue-500 hover:underline">Fase 4 — Arquitetura e Organização</a>
+    </li>
+    <li class="py-1">
+      <a href="#fase-5" class="text-blue-500 hover:underline">Fase 5 — APIs e RxJS</a>
+    </li>
+    <li class="py-1">
+      <a href="#fase-6" class="text-blue-500 hover:underline">Fase 6 — Tópicos Avançados</a>
+    </li>
+    <li class="py-1">
+      <a href="#ordem-prioridade" class="text-blue-500 hover:underline"
+        >Ordem de Prioridade para o Estágio</a
+      >
+    </li>
+    <li class="py-1">
+      <a href="#mapeamento" class="text-blue-500 hover:underline">Mapeamento React → Angular</a>
+    </li>
+    <li class="py-1">
+      <a href="#projeto-pratico" class="text-blue-500 hover:underline"
+        >Projeto Prático Recomendado</a
+      >
+    </li>
+    <li class="py-1">
+      <a href="#competencias" class="text-blue-500 hover:underline"
+        >Competências que Farão Você se Destacar</a
+      >
+    </li>
+    <li class="py-1">
+      <a href="#estrategia-estudo" class="text-blue-500 hover:underline"
+        >Estratégia de Estudo Recomendada</a
+      >
+    </li>
+    <li class="py-1">
+      <a href="#resultado-esperado" class="text-blue-500 hover:underline">Resultado Esperado</a>
+    </li>
+  </ol>
+</section>
+
+<section aria-labelledby="visao-geral" class="mb-8">
+  <h2 id="visao-geral" class="text-2xl font-bold mb-4">📌 Visão Geral da Jornada</h2>
+  <p class="text-lg text-gray-700">O roadmap está dividido em 6 fases:</p>
+  <ol class="list-decimal list-inside text-gray-700">
+    <li class="py-1">Fundamentos do Angular</li>
+    <li class="py-1">Componentes e Templates</li>
+    <li class="py-1">Comunicação e Gerenciamento de Estado</li>
+    <li class="py-1">Arquitetura e Organização</li>
+    <li class="py-1">Consumo de APIs e RxJS</li>
+    <li class="py-1">Tópicos Avançados e Boas Práticas</li>
+  </ol>
+</section>
+
+<section aria-labelledby="fase-1" class="mb-8">
+  <h2 id="fase-1" class="text-2xl font-bold">🧭 FASE 1 — Fundamentos do Angular</h2>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">1. O que é Angular e sua filosofia</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1">Framework completo e opinionado.</li>
+      <li class="py-1">Diferenças entre Angular e React.</li>
+      <li class="py-1">TypeScript como base obrigatória.</li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">2. Estrutura de um projeto Angular</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">main.ts</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">app.config.ts</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">app.routes.ts</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">app.component.ts</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">angular.json</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">tsconfig.json</code></li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">3. Angular CLI</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1"><code>ng new</code></li>
+      <li class="py-1"><code>ng generate</code></li>
+      <li class="py-1"><code>ng serve</code></li>
+      <li class="py-1"><code>ng build</code></li>
+      <li class="py-1"><code>ng test</code></li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">4. Arquitetura baseada em componentes</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1">Componentes standalone.</li>
+      <li class="py-1">Decorator <code class="bg-gray-200 p-1 rounded"> @Component</code>.</li>
+    </ul>
+  </article>
+</section>
+
+<section aria-labelledby="fase-2" class="mb-8">
+  <h2 id="fase-2" class="text-2xl font-bold">🧩 FASE 2 — Componentes e Templates</h2>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">5. Templates HTML do Angular</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1">
+        Interpolação <code class="bg-gray-200 p-1 rounded">{{"{{ }}"}}</code>
+      </li>
+      <li class="py-1">Property Binding <code class="bg-gray-200 p-1 rounded">[prop]</code></li>
+      <li class="py-1">Event Binding <code class="bg-gray-200 p-1 rounded">(event)</code></li>
+      <li class="py-1">Two-way Binding <code class="bg-gray-200 p-1 rounded">[(ngModel)]</code></li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">6. Diretivas</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">&commat;if</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">&commat;for</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">&commat;switch</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">ngClass</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">ngStyle</code></li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">7. Pipes</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">date</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">currency</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">uppercase</code></li>
+      <li class="py-1">Pipes customizados.</li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">8. Signals</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">signal()</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">computed()</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">effect()</code></li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">9. Ciclo de vida dos componentes</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">ngOnInit</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">ngOnChanges</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">ngOnDestroy</code></li>
+    </ul>
+  </article>
+</section>
+
+<section aria-labelledby="fase-3" class="mb-8">
+  <h2 id="fase-3" class="text-2xl font-bold">🔄 FASE 3 — Comunicação entre Componentes</h2>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">10. Input e Output</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">input()</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">output()</code></li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">11. ViewChild e Content Projection</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">viewChild()</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">&lt;ng-content&gt;</code></li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">12. Shared State com Services</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1">Singleton services.</li>
+      <li class="py-1">Injeção de dependência.</li>
+    </ul>
+  </article>
+</section>
+
+<section aria-labelledby="fase-4" class="mb-8">
+  <h2 id="fase-4" class="text-2xl font-bold">🏗️ FASE 4 — Arquitetura e Organização</h2>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">13. Services</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">@Injectable()</code></li>
+      <li>Separação de responsabilidades.</li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">14. Dependency Injection (DI)</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">inject()</code></li>
+      <li class="py-1">Providers.</li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">15. Rotas</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">RouterLink</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">RouterOutlet</code></li>
+      <li class="py-1">Lazy Loading.</li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">16. Guards</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">CanActivateFn</code></li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">17. Interceptors</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1">Manipulação global de requests.</li>
+    </ul>
+  </article>
+</section>
+
+<section aria-labelledby="fase-5" class="mb-8">
+  <h2 id="fase-5" class="text-2xl font-bold">🌐 FASE 5 — APIs e RxJS</h2>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">18. HttpClient</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1">GET, POST, PUT e DELETE.</li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">19. Observables</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">subscribe()</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">pipe()</code></li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">20. Operadores RxJS</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">map</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">switchMap</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">catchError</code></li>
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">debounceTime</code></li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">21. Async Pipe</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1"><code class="bg-gray-200 p-1 rounded">| async</code></li>
+    </ul>
+  </article>
+</section>
+
+<section aria-labelledby="fase-6" class="mb-8">
+  <h2 id="fase-6" class="text-2xl font-bold">🧱 FASE 6 — Tópicos Avançados</h2>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">22. Forms</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1">Template-driven Forms.</li>
+      <li class="py-1">Reactive Forms.</li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">23. Validação de formulários</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1">Validators nativos.</li>
+      <li class="py-1">Validators customizados.</li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">24. Change Detection</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1">Estratégia padrão.</li>
+      <li class="py-1"><code>OnPush</code>.</li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">25. Controle de Performance</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1"><code>track</code>.</li>
+      <li class="py-1">Lazy loading.</li>
+      <li class="py-1">Memoização com <code>computed()</code>.</li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">26. Testes</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1">Unit tests com <code>TestBed</code>.</li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">27. Organização por Features</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1">Core.</li>
+      <li class="py-1">Shared.</li>
+      <li class="py-1">Features.</li>
+    </ul>
+  </article>
+
+  <article class="my-4">
+    <h3 class="text-xl font-bold mb-2">28. Boas práticas</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li class="py-1">Smart vs Presentational Components.</li>
+      <li class="py-1">Tipagem forte.</li>
+      <li class="py-1">Separação de responsabilidades.</li>
+    </ul>
+  </article>
+</section>
+
+<section aria-labelledby="prioridade-estagio" class="mb-8">
+  <h2 id="prioridade-estagio" class="text-2xl font-bold">🏆 Ordem de Prioridade para o Estágio</h2>
+  <ol class="list-decimal list-inside text-gray-700">
+    <li class="py-1">Componentes standalone</li>
+    <li class="py-1">Templates e bindings</li>
+    <li class="py-1">Diretivas (<code>&commat;if</code>, <code>&commat;for</code>)</li>
+    <li class="py-1">Signals</li>
+    <li class="py-1">Services</li>
+    <li class="py-1">Dependency Injection</li>
+    <li class="py-1">HttpClient</li>
+    <li class="py-1">RxJS básico</li>
+    <li class="py-1">Rotas</li>
+    <li class="py-1">Reactive Forms</li>
+    <li class="py-1">Interceptors</li>
+    <li class="py-1">Guards</li>
+  </ol>
+</section>
+
+<section aria-labelledby="react-angular" class="mb-8 flex flex-col items-center">
+  <h2 id="react-angular" class="text-2xl font-bold">⚛️ Mapeamento React → Angular</h2>
+
+  <table class="w-full border-collapse border border-gray-300 max-w-[80%]">
+    <caption class="text-left text-lg mb-4 text-gray-500 font-bold my-4">
+      Equivalência entre conceitos do React e Angular
+    </caption>
+    <thead class="bg-gray-100">
+      <tr class="border-b border-gray-300">
+        <th class="border-r border-gray-300 p-2" scope="col">React</th>
+        <th class="p-2" scope="col">Angular</th>
+      </tr>
+    </thead>
+    <tbody class="text-gray-700 divide-y text-sm text-center">
+      <tr class="border-b border-gray-300">
+        <td class="border-r border-gray-300 p-2">JSX</td>
+        <td class="p-2">Template HTML</td>
+      </tr>
+      <tr class="border-b border-gray-300">
+        <td class="border-r border-gray-300 p-2">Props</td>
+        <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">input()</code></td>
+      </tr>
+      <tr class="border-b border-gray-300">
+        <td class="border-r border-gray-300 p-2">Callback Props</td>
+        <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">output()</code></td>
+      </tr>
+      <tr class="border-b border-gray-300">
+        <td class="border-r border-gray-300 p-2">useState</td>
+        <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">signal()</code></td>
+      </tr>
+      <tr class="border-b border-gray-300">
+        <td class="border-r border-gray-300 p-2">useMemo</td>
+        <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">computed()</code></td>
+      </tr>
+      <tr class="border-b border-gray-300">
+        <td class="border-r border-gray-300 p-2">useEffect</td>
+        <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">effect()</code></td>
+      </tr>
+      <tr class="border-b border-gray-300">
+        <td class="border-r border-gray-300 p-2">useEffect</td>
+        <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">effect()</code></td>
+      </tr>
+      <tr class="border-b border-gray-300">
+        <td class="border-r border-gray-300 p-2">Context API</td>
+        <td class="p-2">Services + DI</td>
+      </tr>
+      <tr class="border-b border-gray-300">
+        <td class="border-r border-gray-300 p-2">React Router</td>
+        <td class="p-2">Angular Router</td>
+      </tr>
+      <tr class="border-b border-gray-300">
+        <td class="border-r border-gray-300 p-2">Fetch/Axios</td>
+        <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">HttpClient</code></td>
+      </tr>
+      <tr class="border-b border-gray-300">
+        <td class="border-r border-gray-300 p-2">Custom Hooks</td>
+        <td class="p-2">Services</td>
+      </tr>
+      <tr class="border-b border-gray-300">
+        <td class="border-r border-gray-300 p-2">Conditional Rendering</td>
+        <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">&commat;if</code></td>
+      </tr>
+      <tr class="border-b border-gray-300">
+        <td class="border-r border-gray-300 p-2">Conditional Rendering</td>
+        <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">&commat;if</code></td>
+      </tr>
+      <tr class="border-b border-gray-300">
+        <td class="border-r border-gray-300 p-2">Array Rendering</td>
+        <td class="p-2"><code class="bg-gray-200 px-1 py-0.5 rounded">&commat;for</code></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section aria-labelledby="projeto-pratico" class="mb-8">
+  <h2 id="projeto-pratico" class="text-xl font-bold mb-4">🚀 Projeto Prático Recomendado</h2>
+  <p class="text-gray-700 mb-4">Construa um CRUD simples de tarefas com:</p>
+  <div
+    class="bg-gray-100 p-4 rounded flex flex-col md:flex-row gap-10 justify-center max-w-[50%] mx-auto"
+  >
+    <ul class="list-disc list-inside">
+      <li class="text-gray-700 py-1">Listagem de tarefas</li>
+      <li class="text-gray-700 py-1">Criação</li>
+      <li class="text-gray-700 py-1">Edição</li>
+      <li class="text-gray-700 py-1">Exclusão</li>
+      <li class="text-gray-700 py-1">Busca</li>
+      <li class="text-gray-700 py-1">Filtros</li>
+      <li class="text-gray-700 py-1">Persistência em API</li>
+    </ul>
+
+    <ul class="list-disc list-inside text-gray-700">
+      <p class="text-gray-700">Isso permitirá praticar:</p>
+      <li class="text-blue-500 py-1">Components</li>
+      <li class="text-blue-500 py-1">Signals</li>
+      <li class="text-blue-500 py-1">Services</li>
+      <li class="text-blue-500 py-1">HttpClient</li>
+      <li class="text-blue-500 py-1">RxJS</li>
+      <li class="text-blue-500 py-1">Forms</li>
+      <li class="text-blue-500 py-1">Routing</li>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="competencias" class="mb-8">
+  <h2 id="competencias" class="text-xl font-bold mb-4">
+    🎯 Competências que Farão Você se Destacar
+  </h2>
+  <ul class="list-disc list-inside text-gray-700">
+    <li class="text-gray-700 py-1">Escrever código tipado.</li>
+    <li class="text-gray-700 py-1">Usar Signals corretamente.</li>
+    <li class="text-gray-700 py-1">Evitar lógica excessiva nos templates.</li>
+    <li class="text-gray-700 py-1">Separar responsabilidades entre componentes e services.</li>
+    <li class="text-gray-700 py-1">Entender RxJS.</li>
+    <li class="text-gray-700 py-1">Criar componentes reutilizáveis.</li>
+    <li class="text-gray-700 py-1">Organizar o projeto por features.</li>
+  </ul>
+</section>
+
+<section aria-labelledby="estrategia-estudo" class="mb-8">
+  <h2 id="estrategia-estudo" class="text-xl font-bold mb-4">📚 Estratégia de Estudo Recomendada</h2>
+  <ol class="list-decimal list-inside text-gray-700">
+    <li class="text-gray-700 py-1">Entenda a teoria.</li>
+    <li class="text-gray-700 py-1">Compare com React.</li>
+    <li class="text-gray-700 py-1">Veja um exemplo simples.</li>
+    <li class="text-gray-700 py-1">Implemente.</li>
+    <li class="text-gray-700 py-1">Refatore.</li>
+  </ol>
+</section>
 
 <footer class="bg-gray-50 p-4">
   <section aria-labelledby="resultado-esperado" class="mb-8">

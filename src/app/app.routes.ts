@@ -4,6 +4,7 @@ import { OQueEAngularESuaFilosofia } from './pages/o-que-e-angular-e-sua-filosof
 import { EstruturaDeUmProjetoAngular } from './pages/estrutura-de-um-projeto-angular/estrutura-de-um-projeto-angular';
 import { AngularCli } from './pages/angular-cli/angular-cli';
 import { ArquiteturaBaseadaEmComponentes } from './pages/arquitetura-baseada-em-componentes/arquitetura-baseada-em-componentes';
+import { TemplatesHtmlEDataBinding } from './pages/templates-html-e-data-binding/templates-html-e-data-binding';
 
 export const routes: Routes = [
   {
@@ -25,5 +26,9 @@ export const routes: Routes = [
   {
     path: "arquitetura-baseada-em-componentes",
     component: ArquiteturaBaseadaEmComponentes
+  },
+  {
+    path: "templates-html-e-data-binding",
+    component: TemplatesHtmlEDataBinding
   }
 ];

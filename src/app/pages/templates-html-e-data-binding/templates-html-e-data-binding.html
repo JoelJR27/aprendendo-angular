@@ -1,0 +1,192 @@
+<h1 class="text-3xl font-bold mb-4">Templates HTML e Data Binding</h1>
+<p class="text-lg text-gray-700 mb-4">
+  Se componentes são o cérebro da aplicação, os templates são a camada visual.
+</p>
+<p class="text-lg text-gray-700 mb-4">
+  No Angular, o template é um arquivo HTML com extensões especiais que permitem:
+</p>
+<ul class="list-disc list-inside text-lg text-gray-700 mb-4">
+  <li class="ml-6 py-1">Exibir dados da classe.</li>
+  <li class="ml-6 py-1">Escutar eventos.</li>
+  <li class="ml-6 py-1">Atualizar propriedades.</li>
+  <li class="ml-6 py-1">Renderizar conteúdo condicionalmente.</li>
+  <li class="ml-6 py-1">Iterar listas.</li>
+</ul>
+<p class="text-lg text-gray-700 mb-4">
+  Se você vem do React, pense no template Angular como uma alternativa ao JSX.
+</p>
+<h2 class="text-2xl font-bold mb-4">🧠 O que é Data Binding?</h2>
+<p class="text-lg text-gray-700 mb-4">Data binding é a conexão entre:</p>
+<ul class="list-disc list-inside text-lg text-gray-700 mb-4">
+  <li class="py-1">A classe TypeScript do componente.</li>
+  <li class="py-1">O template HTML.</li>
+</ul>
+<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4">
+  <code class="text-sm"> (TypeScript) &lt;----&gt; Template (HTML) </code>
+</pre>
+<h2 class="text-2xl font-bold mb-4">📌 Os 4 Tipos de Binding</h2>
+<ol class="list-decimal list-inside text-lg text-gray-700 mb-4">
+  <li class="py-1">Interpolation</li>
+  <li class="py-1">Property Binding</li>
+  <li class="py-1">Event Binding</li>
+  <li class="py-1">Two-Way Binding</li>
+</ol>
+<h3 class="text-xl font-semibold mb-2">1. Interpolation &#123; &#123; &#125; &#125;</h3>
+<p class="text-lg text-gray-700 mb-4">Exibe valores da classe no HTML.</p>
+<h4 class="text-lg font-medium mb-2">Componente</h4>
+<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4">
+  <code class="text-sm text-red-500">
+    export class UserComponent &#123;
+      name = 'Joel';
+    &#125;
+  </code>
+</pre>
+<h4 class="text-lg font-medium mb-2">Template</h4>
+<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4">
+  <code class="text-sm">
+    &lt;h1&gt;Olá, &#123; &#123; 'name' &#125; &#125;!&lt;/h1&gt;
+  </code>
+</pre>
+<strong class="font-medium">Resultado</strong>
+<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4">
+  <code class="text-sm">
+    &lt;h1&gt;Olá, Joel!&lt;/h1&gt;
+  </code>
+</pre>
+<strong class="font-medium">Exemplo:</strong>
+<h6 class="border-y border-blue-500 py-8 mt-6">Olá, {{ name }}!</h6>
+<h3 class="text-xl font-bold my-6">
+  2. Property Binding <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">[property]</span>
+</h3>
+<p class="text-lg text-gray-700 mb-4">Define propriedades do elemento HTML.</p>
+<h4 class="text-lg font-medium mb-2">Componente</h4>
+<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4">
+  <code class="text-sm text-red-500">
+    export class ImageComponent &#123;
+      imageUrl = 'path/to/image.jpg';
+    &#125;
+  </code>
+</pre>
+<h4 class="text-lg font-medium mb-2">Template</h4>
+<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4">
+  <code class="text-sm">
+    &lt;img [src]="imageUrl" /&gt;
+  </code>
+</pre>
+<strong class="font-medium">Exemplo:</strong>
+<img [src]="imageUrl" alt="Imagem Exemplo" class="w-64 h-auto rounded-lg shadow-lg my-4" />
+<h3 class="text-xl font-semibold mb-2">3. Event Binding (event)</h3>
+<p class="text-lg text-gray-700 mb-4">Escuta eventos do DOM.</p>
+<h4 class="text-lg font-medium mb-2">Componente</h4>
+<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4">
+  <code class="text-sm text-red-500">
+    export class CounterComponent &#123;
+      count = 0;
+
+      increment() &#123;
+        this.count++;
+      &#125;
+    &#125;
+  </code>
+</pre>
+<h4 class="text-lg font-medium mb-2">Template</h4>
+<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4">
+  <code class="text-sm">
+    &lt;button (click)="increment()"&gt;Incrementar&lt;/button&gt;
+    &lt;p&gt;Contagem: &#123; &#123; count &#125; &#125;&lt;/p&gt;
+  </code>
+</pre>
+<section class="flex flex-col gap-4 py-8 border-y border-blue-500 my-4">
+  <strong class="font-medium">Exemplo:</strong>
+  <div class="flex gap-4">
+    <button
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
+      (click)="increment()"
+    >
+      Incrementar
+    </button>
+    <button
+      class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
+      (click)="decrement()"
+    >
+      Decrementar
+    </button>
+  </div>
+  <p>Contagem: {{ count }}</p>
+</section>
+<h3 class="text-xl font-semibold mb-2">
+  4. Two-Way Binding <span class="bg-green-100 text-green-800 px-2 py-1 rounded">[(ngModel)]</span>
+</h3>
+<p class="text-lg text-gray-700 mb-4">Sincroniza input e propriedade.</p>
+<h4 class="text-lg font-medium mb-2">Componente</h4>
+<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4">
+  <code class="text-sm text-red-500">
+    export class UserComponent &#123;
+      name = '';
+    &#125;
+  </code>
+</pre>
+<h4 class="text-lg font-medium mb-2">Importante</h4>
+<p class="text-lg text-gray-700 mb-4">
+  Para usar <code class="bg-gray-200 px-2 py-1 rounded">[(ngModel)]</code>, o módulo precisa
+  importar <code class="bg-gray-200 px-2 py-1 rounded">FormsModule</code>.
+</p>
+<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4">
+  <code class="text-sm">
+    import &#123; FormsModule &#125; from '@angular/forms';
+
+  @NgModule(&#123;
+    imports: [FormsModule]
+  &#125;)
+
+  export class AppModule &#123; &#125;
+  </code>
+</pre>
+<section class="flex flex-col gap-4 py-8 border-y border-blue-500 my-4">
+  <strong class="font-medium">Exemplo:</strong>
+  <div>
+    <input type="checkbox" name="example" id="example" class="mr-2" [(ngModel)]="isDisabled" />
+    <label for="example" class="text-lg text-gray-700 font-bold">Desabilitar Botão</label>
+  </div>
+
+  <button
+    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50 disabled:cursor-not-allowed mt-4"
+    [disabled]="isDisabled"
+  >
+    {{ isDisabled ? 'Desabilitado' : 'Habilitado' }}
+  </button>
+</section>
+<h2 class="text-2xl font-bold mb-4">⚛️ Comparação com React</h2>
+<h4 class="text-lg font-medium mb-2">React</h4>
+<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4">
+  <code class="text-sm">
+    &lt;input value=&#123;name&#125; onChange=&#123;(e) => setName(e.target.value)&#125; /&gt;
+  </code>
+</pre>
+<h4 class="text-lg font-medium mb-2">Angular</h4>
+<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4">
+  <code class="text-sm">
+    &lt;input [(ngModel)]="name" /&gt;
+  </code>
+</pre>
+<h2 class="text-2xl font-bold mb-4">🧩 Binding em Atributos e Classes</h2>
+<h4 class="text-lg font-medium mb-2">Classe dinâmica</h4>
+<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4">
+  <code class="text-sm">
+    &lt;div [class.active]="isActive"&gt;Conteúdo&lt;/div&gt;
+  </code>
+</pre>
+<h4 class="text-lg font-medium mb-2">Estilo dinâmico</h4>
+<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4">
+  <code class="text-sm">
+    &lt;div [style.color]="textColor"&gt;Conteúdo&lt;/div&gt;
+  </code>
+</pre>
+<div [style.color]="color">Conteúdo</div>
+<h4 class="text-lg font-medium my-4"><code class="bg-gray-200 px-2 py-1 rounded">ngClass</code></h4>
+<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4">
+  <code class="text-sm">
+      &lt;div [ngClass]="&#123; 'active': isActive, 'inactive': !isActive &#125;"&gt;Conteúdo&lt;/div&gt;
+  </code>
+</pre>
+<div [ngClass]="{ isActive: isActive }">Conteúdo</div>

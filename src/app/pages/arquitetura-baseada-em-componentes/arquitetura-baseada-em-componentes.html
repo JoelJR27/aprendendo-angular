@@ -1,0 +1,240 @@
+<h1 class="text-4xl font-black mb-6">Arquitetura Baseada em Componentes</h1>
+<p class="text-lg text-gray-700 mb-4">
+  Componentes são a unidade fundamental de uma aplicação Angular.
+</p>
+<p class="text-lg text-gray-700 mb-4">
+  Se você já trabalha com React, esse conceito será bastante familiar: um componente representa uma
+  parte reutilizável da interface com sua própria lógica, template e estilos.
+</p>
+<h2 class="text-3xl font-bold mb-6">🧩 O que é um Componente?</h2>
+<p class="text-lg text-gray-700 mb-4">Um componente Angular combina:</p>
+<ul class="list-disc list-inside text-lg text-gray-700 mb-4">
+  <li class="py-1"><strong>Classe TypeScript</strong> → lógica e estado</li>
+  <li class="py-1"><strong>Template HTML</strong> → estrutura visual</li>
+  <li class="py-1"><strong>Estilos CSS/SCSS</strong> → aparência</li>
+  <li class="py-1"><strong>Metadata</strong> → configuração do componente</li>
+</ul>
+<h3 class="text-2xl font-bold mb-4">📦 Exemplo Básico</h3>
+<pre class="bg-gray-200 p-4 rounded-lg">
+  <code class="text-sm text-gray-700">
+    import &#123; Component, signal &#125; from '@angular/core';
+
+    &commat;Component(&#123;
+      selector: 'app-counter',
+      template: `
+        &lt;button (click)="increment()"&gt;
+          &#123;&#123; "count()" &#125;&#125;
+        &lt;/button&gt;
+      `,
+    &#125;)
+
+    export class CounterComponent &#123;
+      count = signal(0);
+
+      increment() &#123;
+        this.count.update(value => value + 1);
+      &#125;
+    &#125;
+  </code>
+</pre>
+<h2 class="text-3xl font-bold mb-6 mt-8">🔍 Entendendo o Decorator <i>@Component</i></h2>
+<p class="text-lg text-gray-700 mb-4">
+  O decorator <i>@Component</i> fornece metadados para o Angular.
+</p>
+<pre class="bg-gray-200 p-4 rounded-lg">
+  <code class="text-sm text-gray-700">
+    @Component(&#123;
+      selector: 'app-counter',
+      templateUrl: './counter.component.html',
+      styleUrl: './counter.component.scss',
+    &#125;)
+  </code>
+</pre>
+<strong class="text-lg font-bold mt-4 block">Principais propriedades</strong>
+<table class="table-auto border border-gray-300">
+  <thead class="bg-gray-100">
+    <tr>
+      <th class="text-left px-4 py-2">Propriedade</th>
+      <th class="text-left px-4 py-2">Descrição</th>
+    </tr>
+  </thead>
+  <tbody class="bg-white">
+    <tr>
+      <td class="border px-4 py-2">
+        <code class="text-sm text-gray-700 bg-amber-50">selector</code>
+      </td>
+      <td class="border px-4 py-2">Nome da tag HTML do componente</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">
+        <code class="text-sm text-gray-700 bg-amber-50">template</code>
+      </td>
+      <td class="border px-4 py-2">HTML inline</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">
+        <code class="text-sm text-gray-700 bg-amber-50">templateUrl</code>
+      </td>
+      <td class="border px-4 py-2">Caminho para o arquivo HTML</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">
+        <code class="text-sm text-gray-700 bg-amber-50">styles</code>
+      </td>
+      <td class="border px-4 py-2">CSS inline</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">
+        <code class="text-sm text-gray-700 bg-amber-50">styleUrl</code>
+      </td>
+      <td class="border px-4 py-2">Caminho para o arquivo de estilo</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">
+        <code class="text-sm text-gray-700 bg-amber-50">imports</code>
+      </td>
+      <td class="border px-4 py-2">Dependências do componente standalone</td>
+    </tr>
+  </tbody>
+</table>
+<h4 class="text-xl font-medium mt-6 pt-6 border-gray-200 border-t">🏷️ selector</h4>
+<p class="text-lg text-gray-700 mt-4">Define como o componente será usado no template.</p>
+<pre class="bg-gray-200 p-4 rounded-lg">
+  <code class="text-sm text-gray-700">
+    selector: 'app-user-card'
+  </code>
+</pre>
+<p class="text-lg text-gray-700 mt-4">Uso:</p>
+<pre class="bg-gray-200 p-4 rounded-lg">
+  <code class="text-sm text-gray-700">
+    &lt;app-user-card&gt;&lt;/app-user-card&gt;
+  </code>
+</pre>
+
+<h4 class="text-xl font-medium mt-6 pt-6 border-gray-200 border-t">🆕 Componentes Standalone</h4>
+<p class="text-lg text-gray-700 mt-4">
+  Desde o Angular moderno, componentes podem ser independentes, sem
+  <code class="bg-gray-200 p-2 rounded">NgModule</code>.
+</p>
+<pre class="bg-gray-200 p-4 rounded-lg mt-6">
+  <code class="text-sm text-gray-700">
+    @Component(&#123;
+      selector: 'app-home',
+      standalone: true,
+      imports: [],
+      template: `<h1>Home</h1>`,
+    &#125;)
+
+    export class HomeComponent &#123;&#125;
+  </code>
+</pre>
+<strong class="text-lg font-bold mt-4 block">Vantagens</strong>
+<ul class="list-disc list-inside text-lg text-gray-700 mb-4">
+  <li>Menos boilerplate</li>
+  <li>Imports explícitos</li>
+  <li>Melhor organização</li>
+  <li>Lazy loading simplificado</li>
+</ul>
+<h4 class="text-xl font-medium mt-6 pt-6 border-gray-200 border-t">⚛️ Comparação com React</h4>
+<strong class="text-lg font-medium mt-4 block">React</strong>
+<pre class="bg-gray-200 p-4 rounded-lg">
+  <code class="text-sm text-gray-700">
+    function Button() &#123;
+      return &lt;button&gt;Clique&lt;/button&gt;;
+    &#125;
+  </code>
+</pre>
+<strong class="text-lg font-medium mt-4 block">Angular</strong>
+<pre class="bg-gray-200 p-4 rounded-lg">
+  <code class="text-sm text-gray-700">
+    @Component(&#123;
+      selector: 'app-button',
+      template: `&lt;button&gt;Clique&lt;/button&gt;`,
+    &#125;)
+
+    export class ButtonComponent &#123;&#125;
+  </code>
+</pre>
+<h3 class="text-2xl font-bold mb-4">Classe do Componente</h3>
+<p class="text-lg text-gray-700 mb-4">A classe armazena:</p>
+<ul class="list-disc list-inside text-lg text-gray-700 mb-4">
+  <li class="py-1">Estado</li>
+  <li class="py-1">Métodos</li>
+  <li class="py-1">Dependências injetadas</li>
+  <li class="py-1">Lifecycle hooks</li>
+</ul>
+<pre class="bg-gray-200 p-4 rounded-lg">
+  <code class="text-sm text-gray-700">
+    export class UserComponent &#123;
+      name = 'Joel';
+
+      changeName() &#123;
+        this.name = 'Angular';
+      &#125;
+    &#125;
+  </code>
+</pre>
+<p class="text-lg text-gray-700 mt-4">Template:</p>
+<pre class="bg-gray-200 p-4 rounded-lg">
+  <code class="text-sm text-gray-700">
+    &lt;p&gt; &#123;&#123; "name &#125;&#125; &lt;/p&gt;
+    &lt;button (click)="changeName()"&gt;Alterar&lt;/button&gt;
+  </code>
+</pre>
+<h4 class="text-xl font-medium mt-6 pt-6 border-gray-200 border-t">
+  🧱 Separação de Responsabilidades
+</h4>
+<strong class="text-lg font-medium mt-4 block">Componente</strong>
+<ul class="list-disc list-inside text-lg text-gray-700 mb-4">
+  <li class="py-1">Controla a interface.</li>
+  <li class="py-1">Responde a eventos.</li>
+  <li class="py-1">Consome services.</li>
+</ul>
+<strong class="text-lg font-medium mt-4 block">Service</strong>
+<ul class="list-disc list-inside text-lg text-gray-700 mb-4">
+  <li class="py-1">Regras de negócio.</li>
+  <li class="py-1">Requisições HTTP.</li>
+  <li class="py-1">Compartilhamento de estado.</li>
+</ul>
+<h3 class="text-2xl font-bold mb-4">📁 Estrutura Gerada</h3>
+<pre class="bg-gray-200 p-4 rounded-lg">
+  <code class="text-sm text-gray-700">
+    user-card/
+    ├── user-card.component.ts
+    ├── user-card.component.html
+    ├── user-card.component.scss
+    └── user-card.component.spec.ts
+  </code>
+</pre>
+<h3 class="text-2xl font-bold my-4">🏗️ Hierarquia de Componentes</h3>
+<pre class="bg-gray-200 p-4 rounded-lg">
+  <code class="text-sm text-gray-700">
+    AppComponent
+    ├── SidebarComponent
+    ├── HeaderComponent
+    └── DashboardComponent
+        ├── StatsCardComponent
+        └── ChartComponent
+  </code>
+</pre>
+<h2 class="text-2xl font-bold my-4">🎯 Boas Práticas</h2>
+<ul class="list-disc list-inside text-lg text-gray-700 mb-4">
+  <li class="py-1">Um componente deve ter responsabilidade clara.</li>
+  <li class="py-1">Evite lógica de negócio complexa.</li>
+  <li class="py-1">Prefira composição.</li>
+  <li class="py-1">Use input() e output() para comunicação.</li>
+  <li class="py-1">Utilize services para lógica compartilhada.</li>
+</ul>
+<h3 class="text-xl font-bold my-4">📝 Resumindo</h3>
+<p class="text-lg text-gray-700 mb-4">
+  Um componente Angular é uma classe TypeScript decorada com @Component, responsável por encapsular
+  lógica, template e estilos de uma parte da interface.
+</p>
+<h4 class="text-lg font-medium my-4">💡 Exercício Recomendado</h4>
+<p class="text-lg text-gray-700 mb-4">Crie um componente de contador:</p>
+<ol class="list-disc list-inside text-lg text-gray-700 mb-4">
+  <li class="py-1">Gere com a CLI.</li>
+  <li class="py-1">Adicione um signal.</li>
+  <li class="py-1">Crie botões para incrementar e decrementar.</li>
+  <li class="py-1">Exiba o valor no template.</li>
+</ol>

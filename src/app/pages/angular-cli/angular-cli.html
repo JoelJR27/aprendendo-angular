@@ -1,0 +1,316 @@
+<h1 class="text-3xl font-bold mb-8">Angular CLI</h1>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">
+  A Angular CLI é uma das ferramentas mais produtivas do ecossistema Angular.
+</p>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">Ela automatiza tarefas como:</p>
+<ul class="list-disc list-inside text-lg text-gray-700 leading-relaxed mb-6">
+  <li>Criação de projetos</li>
+  <li>Geração de componentes, services e guards</li>
+  <li>Build para produção</li>
+  <li>Execução de testes</li>
+  <li>Atualização de versões</li>
+</ul>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">
+  Se no React você usava
+  <code class="text-sm bg-gray-200 p-2 rounded">npm create vite@latest</code>, no Angular a CLI é
+  parte central do fluxo de desenvolvimento.
+</p>
+<h2 class="text-2xl font-bold mb-4">Por que a CLI é tão importante?</h2>
+<p>No Angular, a CLI:</p>
+<ul class="list-disc list-inside text-lg text-gray-700 leading-relaxed mb-6">
+  <li class="py-1">Gera código seguindo convenções oficiais.</li>
+  <li>Atualiza automaticamente arquivos relacionados.</li>
+  <li>Evita erros manuais.</li>
+  <li>Mantém o projeto padronizado.</li>
+</ul>
+<strong class="text-xl font-semibold">Exemplo</strong>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">Ao gerar um componente, ela:</p>
+<ul class="list-disc list-inside text-lg text-gray-700 leading-relaxed mb-6">
+  <li class="py-1">Cria o arquivo .ts</li>
+  <li class="py-1">Cria o template HTML</li>
+  <li class="py-1">Cria o CSS</li>
+  <li class="py-1">Cria o spec de teste</li>
+  <li class="py-1">Atualiza imports automaticamente</li>
+</ul>
+<h2 class="text-2xl font-bold mb-4">Comandos Essenciais</h2>
+<strong class="text-xl font-semibold">Criar um projeto</strong>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng new meu-projeto
+  </code>
+</pre>
+<strong class="text-xl font-semibold">Opções comuns</strong>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng new meu-projeto <span class="text-blue-500">--standalone</span> <span class="text-blue-500">--routing</span> <span class="text-blue-500">--style=scss</span>
+  </code>
+</pre>
+<strong class="text-xl font-semibold">Subir o servidor local</strong>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng serve
+  </code>
+</pre>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">Ou:</p>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng s
+  </code>
+</pre>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">
+  A aplicação fica disponível em:
+  <a
+    href="http://localhost:4200"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="text-blue-500 hover:underline"
+    >http://localhost:4200</a
+  >
+</p>
+<strong class="text-xl font-semibold">Gerar um componente</strong>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng generate component meu-componente
+  </code>
+</pre>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">Atalho:</p>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng g c meu-componente
+  </code>
+</pre>
+<strong class="text-xl font-semibold">Gerar um service</strong>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng generate service meu-service
+  </code>
+</pre>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">Atalho:</p>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng g s meu-service
+  </code>
+</pre>
+<strong class="text-xl font-semibold">Gerar um guard</strong>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng generate guard meu-guard
+  </code>
+</pre>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">Atalho:</p>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng g g meu-guard
+  </code>
+</pre>
+
+<strong class="text-xl font-semibold">Gerar interface</strong>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng g interface models/todo
+  </code>
+</pre>
+<strong class="text-xl font-semibold">Gerar classe</strong>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng g class dtos/create-todo
+  </code>
+</pre>
+<strong class="text-xl font-semibold">Build para produção</strong>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng build
+  </code>
+</pre>
+
+<p class="text-lg text-gray-700 leading-relaxed mb-6">Os arquivos finais são gerados em:</p>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    dist/
+  </code>
+</pre>
+<strong class="text-xl font-semibold">Rodar testes</strong>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng test
+  </code>
+</pre>
+<strong class="text-xl font-semibold">Lint</strong>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng lint
+  </code>
+</pre>
+<strong class="text-xl font-semibold">Atualizar Angular</strong>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng update
+  </code>
+</pre>
+<h3 class="text-2xl font-semibold mb-4 border-t pt-8 border-gray-200">Atalhos Mais Usados</h3>
+<table class="w-full table-auto border-collapse border border-gray-300 mb-8">
+  <thead class="bg-gray-100">
+    <tr class="text-left">
+      <th class="border border-gray-300 p-2">Comando</th>
+      <th class="border border-gray-300 p-2">Atalho</th>
+    </tr>
+  </thead>
+  <tbody class="bg-white">
+    <tr class="border border-gray-300">
+      <td class="border border-gray-300 p-2">
+        <code class="bg-amber-50 p-2 rounded">ng generate component</code>
+      </td>
+      <td class="border border-gray-300 p-2">
+        <code class="bg-amber-50 p-2 rounded">ng g c</code>
+      </td>
+    </tr>
+    <tr class="border border-gray-300">
+      <td class="border border-gray-300 p-2">
+        <code class="bg-amber-50 p-2 rounded">ng generate service</code>
+      </td>
+      <td class="border border-gray-300 p-2">
+        <code class="bg-amber-50 p-2 rounded">ng g s</code>
+      </td>
+    </tr>
+    <tr class="border border-gray-300">
+      <td class="border border-gray-300 p-2">
+        <code class="bg-amber-50 p-2 rounded">ng generate guard</code>
+      </td>
+      <td class="border border-gray-300 p-2">
+        <code class="bg-amber-50 p-2 rounded">ng g g</code>
+      </td>
+    </tr>
+    <tr class="border border-gray-300">
+      <td class="border border-gray-300 p-2">
+        <code class="bg-amber-50 p-2 rounded">ng generate interface</code>
+      </td>
+      <td class="border border-gray-300 p-2">
+        <code class="bg-amber-50 p-2 rounded">ng g i</code>
+      </td>
+    </tr>
+    <tr class="border border-gray-300">
+      <td class="border border-gray-300 p-2">
+        <code class="bg-amber-50 p-2 rounded">ng serve</code>
+      </td>
+      <td class="border border-gray-300 p-2"><code class="bg-amber-50 p-2 rounded">ng s</code></td>
+    </tr>
+    <tr class="border border-gray-300">
+      <td class="border border-gray-300 p-2">
+        <code class="bg-amber-50 p-2 rounded">ng build</code>
+      </td>
+      <td class="border border-gray-300 p-2"><code class="bg-amber-50 p-2 rounded">ng b</code></td>
+    </tr>
+  </tbody>
+</table>
+<h3 class="text-2xl font-semibold mb-4 border-t pt-8 border-gray-200">Comparação com React</h3>
+<table class="w-full table-auto border-collapse border border-gray-300 mb-8">
+  <thead class="bg-gray-100">
+    <tr class="text-left">
+      <th class="border border-gray-300 p-2">React</th>
+      <th class="border border-gray-300 p-2">Angular</th>
+    </tr>
+  </thead>
+  <tbody class="bg-white">
+    <tr class="border border-gray-300">
+      <td class="border border-gray-300 p-2">
+        <code class="bg-amber-50 p-2 rounded">npm create vite@latest</code>
+      </td>
+      <td class="border border-gray-300 p-2">
+        <code class="bg-amber-50 p-2 rounded">ng new</code>
+      </td>
+    </tr>
+    <tr class="border border-gray-300">
+      <td class="border border-gray-300 p-2">
+        <code class="bg-amber-50 p-2 rounded">Criar arquivos manualmente</code>
+      </td>
+      <td class="border border-gray-300 p-2">
+        <code class="bg-amber-50 p-2 rounded">ng generate</code>
+      </td>
+    </tr>
+    <tr class="border border-gray-300">
+      <td class="border border-gray-300 p-2">
+        <code class="bg-amber-50 p-2 rounded">npm run dev</code>
+      </td>
+      <td class="border border-gray-300 p-2">
+        <code class="bg-amber-50 p-2 rounded">ng serve</code>
+      </td>
+    </tr>
+    <tr class="border border-gray-300">
+      <td class="border border-gray-300 p-2">
+        <code class="bg-amber-50 p-2 rounded">npm run build</code>
+      </td>
+      <td class="border border-gray-300 p-2">
+        <code class="bg-amber-50 p-2 rounded">ng build</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h2 class="text-2xl font-semibold mb-4 border-t pt-8 border-gray-200">Exemplo Prático</h2>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng g c features/tasks/task-list
+    ng g s features/tasks/services/task
+    ng g i features/tasks/models/task
+  </code>
+</pre>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">
+  Isso cria toda a estrutura inicial da feature.
+</p>
+<h3 class="text-xl font-semibold mb-4">Flags Úteis</h3>
+<strong class="text-xl font-semibold">Não criar arquivos de teste</strong>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng g c meu-componente --skip-tests
+  </code>
+</pre>
+<strong class="text-xl font-semibold border-t border-blue-500 block pt-6"
+  >Inline template e styles</strong
+>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng g c components/card --inline-template --inline-style
+  </code>
+</pre>
+<strong class="text-xl font-semibold border-t border-blue-500 block pt-6"
+  >Dry run (simulação)</strong
+>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng g c meu-componente --dry-run
+  </code>
+</pre>
+<h2 class="text-2xl font-semibold mb-4 border-t pt-8 border-gray-200">🏆 Boas Práticas</h2>
+<ul class="list-disc list-inside text-lg text-gray-700 leading-relaxed mb-6">
+  <li class="py-1">Use a CLI para gerar arquivos sempre que possível.</li>
+  <li class="py-1">Evite criar componentes manualmente.</li>
+  <li class="py-1">Organize por feature.</li>
+  <li class="py-1">Utilize nomes descritivos.</li>
+</ul>
+<h3 class="text-xl font-semibold mb-4">Comandos que Você Mais Usará no Estágio</h3>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng serve
+    ng g c
+    ng g s
+    ng g guard
+    ng build
+    ng test
+  </code>
+</pre>
+<h3 class="text-xl font-semibold mb-4">📝 Resumindo</h3>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">
+  A Angular CLI é a ferramenta oficial que automatiza a criação, execução, build e manutenção de
+  projetos Angular seguindo as convenções do framework.
+</p>
+<h3 class="text-xl font-semibold mb-4">💡 Exercício Recomendado</h3>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">Crie um projeto e execute:</p>
+<pre class="bg-gray-100 p-2 my-4 rounded border-l-4 border-blue-500">
+  <code class="text-sm">
+    ng new angular-estudos --standalone --routing --style=scss
+    cd angular-estudos
+    ng serve
+    ng g c features/home
+    ng g s services/api
+    ng build
+  </code>
+</pre>
